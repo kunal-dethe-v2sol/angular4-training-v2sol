@@ -7,6 +7,7 @@ import {SharedNavigationTopComponent} from './components/shared/navigation/top/s
 import {SharedFooterComponent} from './components/shared/footer/shared-footer.component';
 
 import {AppRoutes} from './app.routes';
+import {HomeModule} from './components/home/home.module';
 import {ArticlesModule} from './components/articles/articles.module';
 import {ConnectionsModule} from './components/connections/connections.module';
 import {GroupsModule} from './components/groups/groups.module';
@@ -20,11 +21,11 @@ import {SignUpModule} from './components/signup/signup.module';
         AppComponent,
         SharedHeaderComponent,
         SharedNavigationTopComponent,
-        SharedFooterComponent
+        SharedFooterComponent,
     ],
     imports: [
         BrowserModule,
-        AppRoutes,
+        HomeModule,
         ArticlesModule,
         ConnectionsModule,
         GroupsModule,
@@ -32,13 +33,14 @@ import {SignUpModule} from './components/signup/signup.module';
         MessagesModule,
         PostsModule,
         SignUpModule,
+        AppRoutes,
     ],
     providers: [],
     bootstrap: [
         AppComponent,
         SharedHeaderComponent,
         SharedNavigationTopComponent,
-        SharedFooterComponent
+        SharedFooterComponent,
     ]
 })
 export class AppModule {}
