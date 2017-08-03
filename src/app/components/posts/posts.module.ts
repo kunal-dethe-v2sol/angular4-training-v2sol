@@ -1,3 +1,4 @@
+import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 
 import {PostsRoutes} from './posts.routes';
@@ -8,6 +9,7 @@ import {PostsRoutes} from './posts.routes';
         //    PostsListComponent
     ],
     imports: [
+        CommonModule,
         PostsRoutes
     ],
     providers: [],

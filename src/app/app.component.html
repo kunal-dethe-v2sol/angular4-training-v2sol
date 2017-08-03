@@ -8,13 +8,20 @@
 
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
-    <!-- BEGIN TOP NAVIGATION BAR -->
-    <linkcxo-shared-navigation-top></linkcxo-shared-navigation-top>
-    <!-- END TOP NAVIGATION BAR -->
-
-    <!-- BEGIN CONTENT -->
-    <router-outlet></router-outlet>
-    <!-- END CONTENT -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <!-- BEGIN TOP NAVIGATION BAR -->
+                <linkcxo-shared-navigation-top></linkcxo-shared-navigation-top>
+                <!-- END TOP NAVIGATION BAR -->
+            </div>
+            <div class="col-md-10">
+                <!-- BEGIN CONTENT -->
+                <router-outlet></router-outlet>
+                <!-- END CONTENT -->
+            </div>
+        </div>
+    </div>
 </div>
 <!-- END CONTAINER -->
 

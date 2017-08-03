@@ -1,3 +1,4 @@
+import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 
 import {SignUpRoutes} from './signup.routes';
@@ -8,6 +9,7 @@ import {SignUpComponent} from './signup.component';
         SignUpComponent
     ],
     imports: [
+        CommonModule,
         SignUpRoutes
     ],
     providers: [],

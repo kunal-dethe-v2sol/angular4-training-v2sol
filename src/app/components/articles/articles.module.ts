@@ -1,3 +1,4 @@
+import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 
 import {ArticlesRoutes} from './articles.routes';
@@ -8,6 +9,7 @@ import {ArticlesRoutes} from './articles.routes';
         //    ArticlesListComponent
     ],
     imports: [
+        CommonModule,
         ArticlesRoutes
     ],
     providers: [],

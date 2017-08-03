@@ -7,9 +7,18 @@ import {Component, OnInit} from '@angular/core';
 })
 export class GroupsListComponent implements OnInit {
 
+    public ownGroups = [
+        {
+            "uuid":"1",
+            "name":"My First Group"
+        }
+    ];
+
     constructor() {}
 
     ngOnInit() {
+//        getList: []
+        
     }
 
 }

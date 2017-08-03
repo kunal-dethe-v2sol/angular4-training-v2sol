@@ -1,3 +1,4 @@
+import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 
 import {HomeRoutes} from './home.routes';
@@ -8,6 +9,7 @@ import {HomeComponent} from './home.component';
         HomeComponent
     ],
     imports: [
+        CommonModule,
         HomeRoutes
     ],
     providers: [],
