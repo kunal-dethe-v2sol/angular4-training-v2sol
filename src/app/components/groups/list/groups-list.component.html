@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-6">
             <div class="col-md-12">
@@ -6,9 +6,12 @@
                     <div class="panel-heading">Groups You Manage</div>
                     <div class="panel-body">
                         <div *ngIf="ownGroups.length" class="list-group">
-                            <a *ngFor="let group of ownGroups" [routerLink]="['/groups', group.uuid]" class="list-group-item">
-                                <h4 class="list-group-item-heading">{{group.name}} [uuid: {{group.uuid}}]</h4>
-                            </a>
+                            <div *ngFor="let group of ownGroups" class="list-group-item">
+                                <a [routerLink]="['/groups', group.uuid]">
+                                    <h4 class="list-group-item-heading">{{group.name}} [uuid: {{group.uuid}}]</h4>
+                                </a>
+                                <button (click)="delete('own', group.uuid)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Delete</button>
+                            </div>
                         </div>
                     </div>
                 </div>

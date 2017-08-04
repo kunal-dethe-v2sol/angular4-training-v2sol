@@ -67,5 +67,17 @@ export class GroupsListComponent implements OnInit {
             error => {
                 console.log('error: ', error);
             });
-    };
+    }
+    
+    delete(type, id) {
+        this._groupsService
+            .delete(id)
+            .subscribe(
+            response => {
+                this.list(type);
+            },
+            error => {
+                console.log('error: ', error);
+            });
+    }
 }

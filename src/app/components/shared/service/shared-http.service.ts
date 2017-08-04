@@ -25,7 +25,8 @@ export class SharedHttpService {
     }
 
     list(endpoint, params = null) {
-        endpoint = endpoint + '?' + this._objectToQueryString(params);
+        var queryString = params ? this._objectToQueryString(params) : '';
+        endpoint = endpoint + (queryString ? '?' + queryString : '');
         return this._http
             .get(this._apiUrl + endpoint, this._options)
             .map(this._extractData)
@@ -33,9 +34,19 @@ export class SharedHttpService {
     }
 
     detail(endpoint, id, params = null) {
-        endpoint = endpoint + '?id=' + id;
+        var queryString = params ? this._objectToQueryString(params) : '';
+        endpoint = endpoint + '?id=' + id + queryString;
         return this._http
             .get(this._apiUrl + endpoint, this._options)
+            .map(this._extractData)
+            .catch(this._handleError);
+    }
+    
+    delete(endpoint, id, params = null) {
+        var queryString = params ? this._objectToQueryString(params) : '';
+        endpoint = endpoint + '?id=' + id + queryString;
+        return this._http
+            .delete(this._apiUrl + endpoint, this._options)
             .map(this._extractData)
             .catch(this._handleError);
     }

@@ -25,4 +25,8 @@ export class GroupsService {
     detail(id): Observable<any> {
         return this._sharedHttpService.detail(this._endpoint, id);
     }
+
+    delete(id): Observable<any> {
+        return this._sharedHttpService.delete(this._endpoint, id);
+    }
 }
