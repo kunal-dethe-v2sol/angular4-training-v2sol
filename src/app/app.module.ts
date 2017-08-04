@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {CommonModule} from '@angular/common';
+import {HttpModule} from '@angular/http';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
@@ -8,6 +9,8 @@ import {SharedNavigationTopComponent} from './components/shared/navigation/top/s
 import {SharedFooterComponent} from './components/shared/footer/shared-footer.component';
 
 import {AppRoutes} from './app.routes';
+
+import {SharedModule} from './components/shared/shared.module';
 import {HomeModule} from './components/home/home.module';
 import {ArticlesModule} from './components/articles/articles.module';
 import {ConnectionsModule} from './components/connections/connections.module';
@@ -27,6 +30,8 @@ import {SignUpModule} from './components/signup/signup.module';
     imports: [
         BrowserModule,
         CommonModule,
+        HttpModule,
+        SharedModule,
         HomeModule,
         ArticlesModule,
         ConnectionsModule,

@@ -3,6 +3,7 @@ import {NgModule} from '@angular/core';
 
 import {GroupsRoutes} from './groups.routes';
 import {GroupsListComponent} from './list/groups-list.component';
+import {GroupsService} from './groups.service';
 
 @NgModule({
     declarations: [
@@ -12,6 +13,8 @@ import {GroupsListComponent} from './list/groups-list.component';
         CommonModule,
         GroupsRoutes
     ],
-    providers: [],
+    providers: [
+        GroupsService
+    ],
 })
 export class GroupsModule {}

@@ -1,4 +1,8 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+
+import {Group} from './../group';
+import {GroupsService} from './../groups.service';
 
 @Component({
     selector: 'linkcxo-groups-list',
@@ -7,18 +11,61 @@ import {Component, OnInit} from '@angular/core';
 })
 export class GroupsListComponent implements OnInit {
 
-    public ownGroups = [
-        {
-            "uuid":"1",
-            "name":"My First Group"
-        }
-    ];
+    //Variables
+    public ownGroups = [];
+    public joinedGroups = [];
+    public trendingGroups = [];
+    public group: Group[] = [];
+    public id = 0;
 
-    constructor() {}
+    //Constructor
+    constructor(
+        private _route: ActivatedRoute,
+        private _groupsService: GroupsService
+    ) {}
 
+    //Angular Hooks
     ngOnInit() {
-//        getList: []
-        
+        this._route.params.subscribe(params => {
+            if(typeof params.id == 'string') {
+                this.id = params['id'];
+                this.detail(this.id);
+            } else {
+                this.list('own');
+                this.list('joined');
+                this.list('trending');
+            }
+        });
     }
 
+    //Custom Functions
+    list(type) {
+        this._groupsService
+            .list(type)
+            .subscribe(
+            response => {
+                if (type == 'own') {
+                    this.ownGroups = response;
+                }
+                else if (type == 'joined')
+                    this.joinedGroups = response;
+                else if (type == 'trending')
+                    this.trendingGroups = response;
+            },
+            error => {
+                console.log('error: ', error);
+            });
+    }
+
+    detail(id) {
+        this._groupsService
+            .detail(id)
+            .subscribe(
+            response => {
+                this.group = response;
+            },
+            error => {
+                console.log('error: ', error);
+            });
+    };
 }
