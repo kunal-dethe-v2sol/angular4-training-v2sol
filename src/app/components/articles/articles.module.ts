@@ -6,11 +6,11 @@ import {ArticlesRoutes} from './articles.routes';
 
 @NgModule({
     declarations: [
-        //    ArticlesListComponent
+        //    ArticlesListComponent,
     ],
     imports: [
         CommonModule,
-        ArticlesRoutes
+        ArticlesRoutes,
     ],
     providers: [],
 })

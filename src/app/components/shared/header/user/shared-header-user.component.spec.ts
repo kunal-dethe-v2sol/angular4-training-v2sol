@@ -1,20 +1,20 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {SharedHeaderComponent} from './shared-header.component';
+import {SharedHeaderUserComponent} from './shared-header-user.component';
 
-describe('SharedHeaderComponent', () => {
-    let component: SharedHeaderComponent;
-    let fixture: ComponentFixture<SharedHeaderComponent>;
+describe('SharedHeaderUserComponent', () => {
+    let component: SharedHeaderUserComponent;
+    let fixture: ComponentFixture<SharedHeaderUserComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [SharedHeaderComponent]
+            declarations: [SharedHeaderUserComponent]
         })
             .compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(SharedHeaderComponent);
+        fixture = TestBed.createComponent(SharedHeaderUserComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

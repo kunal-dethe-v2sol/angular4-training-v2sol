@@ -7,7 +7,7 @@ import {SharedHttpService} from './service/shared-http.service';
     declarations: [],
     imports: [],
     providers: [
-        SharedHttpService
+        SharedHttpService,
     ],
 })
 export class SharedModule {}

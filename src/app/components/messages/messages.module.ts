@@ -6,11 +6,11 @@ import {MessagesRoutes} from './messages.routes';
 
 @NgModule({
     declarations: [
-        //    MessagesListComponent
+        //    MessagesListComponent,
     ],
     imports: [
         CommonModule,
-        MessagesRoutes
+        MessagesRoutes,
     ],
     providers: [],
 })

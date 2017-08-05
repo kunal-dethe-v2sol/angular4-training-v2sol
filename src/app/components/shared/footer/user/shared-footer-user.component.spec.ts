@@ -1,20 +1,20 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {SharedNavigationTopComponent} from './shared-navigation-top.component';
+import {SharedFooterUserComponent} from './shared-footer-user.component';
 
-describe('SharedNavigationTopComponent', () => {
-    let component: SharedNavigationTopComponent;
-    let fixture: ComponentFixture<SharedNavigationTopComponent>;
+describe('SharedFooterUserComponent', () => {
+    let component: SharedFooterUserComponent;
+    let fixture: ComponentFixture<SharedFooterUserComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [SharedNavigationTopComponent]
+            declarations: [SharedFooterUserComponent]
         })
             .compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(SharedNavigationTopComponent);
+        fixture = TestBed.createComponent(SharedFooterUserComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

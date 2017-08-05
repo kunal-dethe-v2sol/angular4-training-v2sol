@@ -7,11 +7,11 @@ import {GroupsService} from './groups.service';
 
 @NgModule({
     declarations: [
-        GroupsListComponent
+        GroupsListComponent,
     ],
     imports: [
         CommonModule,
-        GroupsRoutes
+        GroupsRoutes,
     ],
     providers: [
         GroupsService

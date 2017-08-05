@@ -6,11 +6,11 @@ import {ConnectionsRoutes} from './connections.routes';
 
 @NgModule({
     declarations: [
-        //    ConnectionsListComponent
+        //    ConnectionsListComponent,
     ],
     imports: [
         CommonModule,
-        ConnectionsRoutes
+        ConnectionsRoutes,
     ],
     providers: [],
 })

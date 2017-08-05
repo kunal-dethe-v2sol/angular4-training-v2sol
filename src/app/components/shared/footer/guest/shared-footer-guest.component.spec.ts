@@ -1,20 +1,20 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {SharedFooterComponent} from './shared-footer.component';
+import {SharedFooterGuestComponent} from './shared-footer-guest.component';
 
-describe('SharedFooterComponent', () => {
-    let component: SharedFooterComponent;
-    let fixture: ComponentFixture<SharedFooterComponent>;
+describe('SharedFooterGuestComponent', () => {
+    let component: SharedFooterGuestComponent;
+    let fixture: ComponentFixture<SharedFooterGuestComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [SharedFooterComponent]
+            declarations: [SharedFooterGuestComponent]
         })
             .compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(SharedFooterComponent);
+        fixture = TestBed.createComponent(SharedFooterGuestComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

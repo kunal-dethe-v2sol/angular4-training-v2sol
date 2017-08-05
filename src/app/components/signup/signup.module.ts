@@ -6,11 +6,11 @@ import {SignUpComponent} from './signup.component';
 
 @NgModule({
     declarations: [
-        SignUpComponent
+        SignUpComponent,
     ],
     imports: [
         CommonModule,
-        SignUpRoutes
+        SignUpRoutes,
     ],
     providers: [],
 })
