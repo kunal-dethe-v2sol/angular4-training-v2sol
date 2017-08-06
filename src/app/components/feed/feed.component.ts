@@ -10,6 +10,7 @@ export class FeedComponent implements OnInit {
     constructor() {}
 
     ngOnInit() {
+        console.log('into feed');
     }
 
 }

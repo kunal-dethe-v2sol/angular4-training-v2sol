@@ -26,6 +26,7 @@ export class GroupsListComponent implements OnInit {
 
     //Angular Hooks
     ngOnInit() {
+        console.log('into groups');
         this._route.params.subscribe(params => {
             if(typeof params.id == 'string') {
                 this.id = params['id'];
