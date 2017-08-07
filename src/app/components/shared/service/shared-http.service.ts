@@ -10,11 +10,20 @@ import {CONST} from './../shared.constants';
 
 @Injectable()
 export class SharedHttpService {
-    _headers: Headers;
-    _options: RequestOptions;
-    _apiUrl = CONST['apiURL'];
+    private _headers: Headers;
+    private _options: RequestOptions;
+    private _apiUrl = CONST['apiURL'];
 
-    constructor(private _http: Http) {
+    //Constructor parameters
+    static get parameters() {
+        return [
+            Http
+        ];
+    }
+
+    constructor(
+        private _http) {
+
         this._headers = new Headers({
             'Content-Type': 'application/json',
         });
@@ -40,7 +49,7 @@ export class SharedHttpService {
             .map(this._extractData)
             .catch(this._handleError);
     }
-    
+
     delete(endpoint, id, params = null) {
         var queryString = params ? this._objectToQueryString(params) : '';
         endpoint = endpoint + '?id=' + id + queryString;
@@ -56,7 +65,7 @@ export class SharedHttpService {
             .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(object[key])}`)
             .join('&');
     }
-    
+
     private _extractData(res: Response) {
         let body = <any> res.json().data;
         return body || {};

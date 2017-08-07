@@ -2,6 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {CommonModule} from '@angular/common';
 import {HttpModule} from '@angular/http';
 import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {StorageModule} from '@cedx/ngx-webstorage';
 
 import {AppComponent} from './app.component';
 import {SharedHeaderGuestComponent} from './components/shared/header/guest/shared-header-guest.component';
@@ -37,6 +38,7 @@ import {SignUpModule} from './components/signup/signup.module';
         BrowserModule,
         CommonModule,
         HttpModule,
+        StorageModule,
         SharedModule,
         ArticlesModule,
         GroupsModule,
@@ -54,9 +56,9 @@ import {SignUpModule} from './components/signup/signup.module';
     ],
     bootstrap: [
         AppComponent,
-        SharedHeaderGuestComponent,
-        SharedNavigationTopGuestComponent,
-        SharedFooterGuestComponent,
+//        SharedHeaderGuestComponent,
+//        SharedNavigationTopGuestComponent,
+//        SharedFooterGuestComponent,
     ],
 })
 export class AppModule {}

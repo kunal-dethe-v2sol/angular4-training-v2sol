@@ -12,10 +12,21 @@ export class SharedNavigationTopUserComponent implements OnInit {
 
     //Variables
 
+    //Constructor parameters
+    static get parameters() {
+        return [
+            SharedService,
+            Router
+        ];
+    }
+
     //Constructor
     constructor(
-        private _sharedService: SharedService,
-        private _router: Router) {}
+        private _sharedService,
+        private _router) {
+
+
+    }
 
     //Angular Hooks
     ngOnInit() {
@@ -23,7 +34,8 @@ export class SharedNavigationTopUserComponent implements OnInit {
 
     //Custom Methods
     logout() {
-        this._sharedService.onLoginEvent.emit(false);
+        this._sharedService.getAuthService().setLoggedIn(false);
+        this._sharedService.loginEventEmitter.emit(false);
         this._router.navigate(['']);
     }
 }

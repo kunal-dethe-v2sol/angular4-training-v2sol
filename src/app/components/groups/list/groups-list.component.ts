@@ -18,17 +18,27 @@ export class GroupsListComponent implements OnInit {
     public group: Group[] = [];
     public id = 0;
 
+    //Constructor parameters
+    static get parameters() {
+        return [
+            ActivatedRoute,
+            GroupsService
+        ];
+    }
+
     //Constructor
     constructor(
-        private _route: ActivatedRoute,
-        private _groupsService: GroupsService
-    ) {}
+        private _route,
+        private _groupsService) {
+
+
+    }
 
     //Angular Hooks
     ngOnInit() {
         console.log('into groups');
         this._route.params.subscribe(params => {
-            if(typeof params.id == 'string') {
+            if (typeof params.id == 'string') {
                 this.id = params['id'];
                 this.detail(this.id);
             } else {
@@ -69,7 +79,7 @@ export class GroupsListComponent implements OnInit {
                 console.log('error: ', error);
             });
     }
-    
+
     delete(type, id) {
         this._groupsService
             .delete(id)

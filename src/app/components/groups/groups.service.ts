@@ -1,32 +1,38 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 
-//import {Http, Response, Headers, RequestOptions} from '@angular/http';
-//import {Observable} from 'rxjs/Observable';
-//import 'rxjs/add/observable/throw';
-//import 'rxjs/add/operator/catch';
-//import 'rxjs/add/operator/do';
-//import 'rxjs/add/operator/map';
-
-import {SharedHttpService} from './../shared/service/shared-http.service';
+import {SharedService} from './../shared/service/shared.service';
 
 @Injectable()
 export class GroupsService {
+
+    //Variables
     _endpoint = 'index.php';
 
-    constructor(
-        private _sharedHttpService: SharedHttpService) {
+    //Constructor parameters
+    static get parameters() {
+        return [
+            SharedService
+        ];
     }
 
+    //Constructor
+    constructor(
+        private _sharedService) {
+
+
+    }
+
+    //Custom Methods
     list(type): Observable<any> {
-        return this._sharedHttpService.list(this._endpoint, {type: type});
+        return this._sharedService.getHttpService().list(this._endpoint, {type: type});
     }
 
     detail(id): Observable<any> {
-        return this._sharedHttpService.detail(this._endpoint, id);
+        return this._sharedService.getHttpService().detail(this._endpoint, id);
     }
 
     delete(id): Observable<any> {
-        return this._sharedHttpService.delete(this._endpoint, id);
+        return this._sharedService.getHttpService().delete(this._endpoint, id);
     }
 }

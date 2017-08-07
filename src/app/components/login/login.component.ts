@@ -11,19 +11,31 @@ import {SharedService} from './../shared/service/shared.service';
 export class LoginComponent implements OnInit {
 
     //Variables
-    
+
+    //Constructor parameters
+    static get parameters() {
+        return [
+            SharedService,
+            Router
+        ];
+    }
+
     //Constructor
     constructor(
-        private _sharedService: SharedService,
-        private _router: Router) {}
+        private _sharedService,
+        private _router) {
+
+
+    }
 
     //Angular Hooks
     ngOnInit() {
     }
-    
+
     //Custom Methods
     login() {
-        this._sharedService.onLoginEvent.emit(true);
+        this._sharedService.getAuthService().setLoggedIn(true);
+        this._sharedService.loginEventEmitter.emit(true);
         this._router.navigate(['home']);
     }
 

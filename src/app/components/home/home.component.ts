@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
+import {SharedService} from './../shared/service/shared.service';
+
 @Component({
     selector: 'linkcxo-home',
     templateUrl: './home.component.html',
@@ -9,8 +11,19 @@ export class HomeComponent implements OnInit {
 
     //Variables
 
+    //Constructor parameters
+    static get parameters() {
+        return [
+            SharedService
+        ];
+    }
+
     //Constructor
-    constructor() {}
+    constructor(
+        private _sharedService) {
+
+        
+    }
 
     //Angular Hooks
     ngOnInit() {

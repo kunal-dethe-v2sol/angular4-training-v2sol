@@ -11,7 +11,16 @@ export class GroupsService {
     _headers: Headers;
     _options: RequestOptions;
 
-    constructor(private _http: Http) {
+    //Constructor parameters
+    static get parameters() {
+        return [
+            Http
+        ];
+    }
+
+    constructor(
+        private _http: Http) {
+        
         this._headers = new Headers({
             'Content-Type': 'application/json',
         });

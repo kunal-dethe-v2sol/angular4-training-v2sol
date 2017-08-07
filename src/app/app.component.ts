@@ -12,12 +12,21 @@ export class AppComponent implements OnInit {
     //Variables
     public isLoggedIn = false;
 
+    //Constructor parameters
+    static get parameters() {
+        return [
+            SharedService
+        ];
+    }
+
     //Constructor
-    constructor(private _sharedService: SharedService) {
+    constructor(
+        private _sharedService) {
+
         /**
          * Listens to the emit fired to change the main layout after login and logout.
          */
-        this._sharedService.onLoginEvent.subscribe(
+        this._sharedService.loginEventEmitter.subscribe(
             (status) => {
                 this.isLoggedIn = status;
             });
@@ -25,6 +34,7 @@ export class AppComponent implements OnInit {
 
     //Angular Hooks
     ngOnInit() {
+        this.isLoggedIn = this._sharedService.getAuthService().isLoggedIn();
     }
 
     //Custom Methods
