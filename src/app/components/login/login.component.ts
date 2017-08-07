@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'linkcxo-login',
@@ -7,9 +8,15 @@ import {Component, OnInit} from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-    constructor() {}
+    constructor(
+        private _router: Router) {}
 
     ngOnInit() {
+        
+    }
+    
+    login() {
+        this._router.navigate(['/home']);
     }
 
 }

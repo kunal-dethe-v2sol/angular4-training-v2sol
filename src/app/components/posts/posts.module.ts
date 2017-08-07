@@ -6,12 +6,12 @@ import {PostsRoutes} from './posts.routes';
 
 @NgModule({
     declarations: [
-        //    PostsListComponent,
+        //    PostsListComponent
     ],
     imports: [
         CommonModule,
-        PostsRoutes,
+        PostsRoutes
     ],
-    providers: [],
+    providers: []
 })
 export class PostsModule {}

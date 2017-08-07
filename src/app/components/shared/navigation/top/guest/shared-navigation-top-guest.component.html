@@ -1,16 +1,20 @@
 <div class="container-fluid">
     <ul class="nav nav-pills nav-stacked">
         <li>
-            <a [routerLink]="['']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+            <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Landing</a>
+            <!--<a routerLink="" routerLinkActive="active">Landing</a>-->
         </li>
         <li>
-            <a [routerLink]="['', 'login']" routerLinkActive="active">Login</a>
+            <a routerLink="login" routerLinkActive="active">Login</a>
         </li>
         <li>
-            <a [routerLink]="['', 'signup']" routerLinkActive="active">SignUp</a>
+            <a routerLink="signup" routerLinkActive="active">SignUp</a>
+        </li>
+<!--        <li>
+            <a routerLink="home" routerLinkActive="active">Home</a>
         </li>
         <li>
-            <a [routerLink]="['/feed']" routerLinkActive="active">Feed</a>
-        </li>
+            <a routerLink="groups" routerLinkActive="active">Groups</a>
+        </li>-->
     </ul>
 </div>

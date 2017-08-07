@@ -6,7 +6,7 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 
-import {CONST} from './shared.constants';
+import {CONST} from './../shared.constants';
 import {Group} from './../../groups/group';
 
 @Injectable()

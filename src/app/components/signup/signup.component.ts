@@ -1,18 +1,15 @@
 import {Component, OnInit} from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-signup',
+    selector: 'linkcxo-signup',
     templateUrl: './signup.component.html',
     styleUrls: ['./signup.component.css']
 })
 export class SignUpComponent implements OnInit {
 
-    constructor(private router: Router) {}
+    constructor() {}
 
     ngOnInit() {
-		//this.router.navigate(['/groups']);
-		//return false;
     }
 
 }

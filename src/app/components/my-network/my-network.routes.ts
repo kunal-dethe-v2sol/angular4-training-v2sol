@@ -1,15 +1,10 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
-import {LoginComponent} from './login.component';
-import {SignUpComponent} from './../signup/signup.component';
+//import { MyNetworkComponent } from './my-network.component';  
 
 const routes: Routes = [
-    {
-        path: 'login',
-        component: LoginComponent,
-//        canActivate: []
-    }
+    //  { path: 'my-network', component: MyNetworkComponent }
 ];
 @NgModule({
     imports: [
@@ -19,4 +14,4 @@ const routes: Routes = [
         RouterModule
     ]
 })
-export class LoginRoutes {}
+export class MyNetworkRoutes {}
