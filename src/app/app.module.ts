@@ -29,9 +29,9 @@ import {SignUpModule} from './components/signup/signup.module';
         SharedHeaderGuestComponent,
         SharedNavigationTopGuestComponent,
         SharedFooterGuestComponent,
-//        SharedHeaderUserComponent,
-//        SharedNavigationTopUserComponent,
-//        SharedFooterUserComponent
+        SharedHeaderUserComponent,
+        SharedNavigationTopUserComponent,
+        SharedFooterUserComponent
     ],
     imports: [
         BrowserModule,
@@ -57,9 +57,6 @@ import {SignUpModule} from './components/signup/signup.module';
         SharedHeaderGuestComponent,
         SharedNavigationTopGuestComponent,
         SharedFooterGuestComponent,
-//        SharedHeaderUserComponent,
-//        SharedNavigationTopUserComponent,
-//        SharedFooterUserComponent
     ],
 })
 export class AppModule {}

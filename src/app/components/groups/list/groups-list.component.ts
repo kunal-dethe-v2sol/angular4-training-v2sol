@@ -39,7 +39,7 @@ export class GroupsListComponent implements OnInit {
         });
     }
 
-    //Custom Functions
+    //Custom Methods
     list(type) {
         this._groupsService
             .list(type)

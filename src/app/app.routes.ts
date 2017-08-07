@@ -11,16 +11,6 @@ const routes: Routes = [
         component: LoginComponent,
         //canActivate: []
     },
-//    {
-//        path: 'login',
-//        component: LoginComponent,
-////        canActivate: []
-//    },
-//    {
-//        path: 'signup',
-//        component: SignUpComponent,
-////        canActivate: []
-//    },
     {path: '**', pathMatch: 'full', redirectTo: '/login'}
 ];
 

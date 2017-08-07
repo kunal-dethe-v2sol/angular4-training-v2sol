@@ -1,3 +1,4 @@
+<!-- BEGIN GUEST -->
 <div *ngIf="!isLoggedIn">
     <!-- BEGIN HEADER -->
     <linkcxo-shared-header-guest></linkcxo-shared-header-guest>
@@ -30,6 +31,9 @@
     <linkcxo-shared-footer-guest></linkcxo-shared-footer-guest>
     <!-- END FOOTER -->
 </div>
+<!-- END GUEST -->
+
+<!-- BEGIN USER -->
 <div *ngIf="isLoggedIn">
     <!-- BEGIN HEADER -->
     <linkcxo-shared-header-user></linkcxo-shared-header-user>
@@ -62,3 +66,4 @@
     <linkcxo-shared-footer-user></linkcxo-shared-footer-user>
     <!-- END FOOTER -->
 </div>
+<!-- END USER -->

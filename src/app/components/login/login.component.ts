@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import { Router } from '@angular/router';
+import {Router} from '@angular/router';
+
+import {SharedService} from './../shared/service/shared.service';
 
 @Component({
     selector: 'linkcxo-login',
@@ -8,15 +10,21 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+    //Variables
+    
+    //Constructor
     constructor(
+        private _sharedService: SharedService,
         private _router: Router) {}
 
+    //Angular Hooks
     ngOnInit() {
-        
     }
     
+    //Custom Methods
     login() {
-        this._router.navigate(['/home']);
+        this._sharedService.onLoginEvent.emit(true);
+        this._router.navigate(['home']);
     }
 
 }

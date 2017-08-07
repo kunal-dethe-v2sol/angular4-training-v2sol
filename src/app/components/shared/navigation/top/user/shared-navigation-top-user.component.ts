@@ -1,4 +1,7 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+
+import {SharedService} from './../../../service/shared.service';
 
 @Component({
     selector: 'linkcxo-shared-navigation-top-user',
@@ -7,9 +10,20 @@ import {Component, OnInit} from '@angular/core';
 })
 export class SharedNavigationTopUserComponent implements OnInit {
 
-    constructor() {}
+    //Variables
 
+    //Constructor
+    constructor(
+        private _sharedService: SharedService,
+        private _router: Router) {}
+
+    //Angular Hooks
     ngOnInit() {
     }
 
+    //Custom Methods
+    logout() {
+        this._sharedService.onLoginEvent.emit(false);
+        this._router.navigate(['']);
+    }
 }

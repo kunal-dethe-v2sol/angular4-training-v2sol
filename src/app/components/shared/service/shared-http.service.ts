@@ -7,7 +7,6 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 
 import {CONST} from './../shared.constants';
-import {Group} from './../../groups/group';
 
 @Injectable()
 export class SharedHttpService {

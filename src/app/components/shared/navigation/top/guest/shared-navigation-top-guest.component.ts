@@ -7,9 +7,14 @@ import {Component, OnInit} from '@angular/core';
 })
 export class SharedNavigationTopGuestComponent implements OnInit {
 
+    //Variables
+
+    //Constructor
     constructor() {}
 
+    //Angular Hooks
     ngOnInit() {
     }
 
+    //Custom Methods
 }

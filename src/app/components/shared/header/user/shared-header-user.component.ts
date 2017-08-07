@@ -7,9 +7,14 @@ import {Component, OnInit} from '@angular/core';
 })
 export class SharedHeaderUserComponent implements OnInit {
 
+    //Variables
+
+    //Constructor
     constructor() {}
 
+    //Angular Hooks
     ngOnInit() {
     }
 
+    //Custom Methods
 }
