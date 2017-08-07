@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {LocalStorage, SessionStorage} from '@cedx/ngx-webstorage';
+import {LocalStorageService, SessionStorageService} from 'ng2-webstorage';
 
 @Injectable()
 export class SharedStorageService {
@@ -9,8 +9,8 @@ export class SharedStorageService {
     //Constructor parameters
     static get parameters() {
         return [
-            LocalStorage,
-            SessionStorage
+            LocalStorageService,
+            SessionStorageService
         ];
     }
 
