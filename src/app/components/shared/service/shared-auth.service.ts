@@ -27,7 +27,7 @@ export class SharedAuthService {
      * Returns if the User is logged in or not.
      */
     isLoggedIn() {
-        this._isLoggedIn = this._storageService.getLocal().retrieve('isLoggedIn', false) === 'true';
+        this._isLoggedIn = this._storageService.getLocal().retrieve('isLoggedIn');
         return this._isLoggedIn;
     }
 

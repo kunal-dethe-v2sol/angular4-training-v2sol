@@ -1,0 +1,69 @@
+<!-- BEGIN GUEST -->
+<div *ngIf="!isLoggedIn">
+    <!-- BEGIN HEADER -->
+    <linkcxo-shared-header-guest></linkcxo-shared-header-guest>
+    <!-- END HEADER -->
+
+    <!-- BEGIN HEADER & CONTENT DIVIDER -->
+    <div class="clearfix"> </div>
+    <!-- END HEADER & CONTENT DIVIDER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2">
+                    <!-- BEGIN TOP NAVIGATION BAR -->
+                    <linkcxo-shared-navigation-top-guest></linkcxo-shared-navigation-top-guest>
+                    <!-- END TOP NAVIGATION BAR -->
+                </div>
+                <div class="col-md-10">
+                    <!-- BEGIN CONTENT -->
+                        <router-outlet></router-outlet>
+                    <!-- END CONTENT -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END CONTAINER -->
+
+    <!-- BEGIN FOOTER -->
+    <linkcxo-shared-footer-guest></linkcxo-shared-footer-guest>
+    <!-- END FOOTER -->
+</div>
+<!-- END GUEST -->
+
+<!-- BEGIN USER -->
+<div *ngIf="isLoggedIn">
+    <!-- BEGIN HEADER -->
+    <linkcxo-shared-header-user></linkcxo-shared-header-user>
+    <!-- END HEADER -->
+
+    <!-- BEGIN HEADER & CONTENT DIVIDER -->
+    <div class="clearfix"> </div>
+    <!-- END HEADER & CONTENT DIVIDER -->
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2">
+                    <!-- BEGIN TOP NAVIGATION BAR -->
+                    <linkcxo-shared-navigation-top-user></linkcxo-shared-navigation-top-user>
+                    <!-- END TOP NAVIGATION BAR -->
+                </div>
+                <div class="col-md-10">
+                    <!-- BEGIN CONTENT -->
+                        <router-outlet></router-outlet>
+                    <!-- END CONTENT -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END CONTAINER -->
+
+    <!-- BEGIN FOOTER -->
+    <linkcxo-shared-footer-user></linkcxo-shared-footer-user>
+    <!-- END FOOTER -->
+</div>
+<!-- END USER -->
